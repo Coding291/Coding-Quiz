@@ -69,13 +69,12 @@ var questions = [
    
 
 var showQuestions = function() {
-    // console.log(questions[0].question)
 
     var headerEl = document.querySelector("#header-question")
     headerEl.innerHTML = "";
     var choicesEl = document.createElement("h2")
     choicesEl.textContent = questions[index].Quiz;
-    headerEl.appendChild(choicesEl)
+    headerEl.appendChild(choicesEl);
     for (var i = 1; i < 5; i++) {
       var option = document.createElement("button");
       option.textContent = questions[index]["choice" + i];
@@ -112,7 +111,7 @@ var showQuestions = function() {
 
   var gameOver = function() {
     var playerName = window.prompt("Enter players name: ");
-    var outcome = alert(playerName + " score is " + score);
+    var outcome = alert(playerName + "score is " + score);
 
   
   }
