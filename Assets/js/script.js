@@ -7,7 +7,7 @@ const countdownEl = document.querySelector("#countdown");
 //Created a variable called timerID to work with time interval method which will be later be mentioned in thre code.
 var timerID;
 //Created a variable called seconds and assign it a number in this instance 100 so the user would know the exact time.
-var seconds = 100;
+var seconds = 60;
 //Created a variable called questions and inside of that we have an array of objects and inside each objects we have a question and four choices.
 var questions = [
   {
@@ -96,7 +96,7 @@ var showQuestions = function() {
     //Here we grab the ID countdown from HTML and give it El for it become a element and then we assign it back to HTML using innerHTML and set it equals to seconds using jquery
     countdownEl.innerHTML = `Timer : ${seconds} seconds`;
     //Here we created if else statement to check when the second is is less than 0 OR score >= the most possible score OR if the question reaches its limit
-    if (seconds <= 0 || score >= 100 || questions.length[index] ) {
+    if (seconds <= 0  || questions.length[index]) {
         // Run the gameover function which would end the game which we will talk about it next
         gameOver()
     }
@@ -111,7 +111,7 @@ var showQuestions = function() {
     //create a variable called playername and assigned it to a window prompt and so the prompt would appear once the game ends and it would ask for Players name
     var playerName = window.prompt("Enter players name: ");
     //created another variable so through alert we can tell the users name and his/her final score
-    var outcome = alert(playerName + "score is " + score);
+    var outcome = alert(playerName + " score is " + score);
 
   
   }
