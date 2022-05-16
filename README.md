@@ -10,7 +10,7 @@
 
 # Screenshot
 
-![Getting Started](/Assets/Images/Screen%20Shot%202022-05-15%20at%207.38.31%20PM.png)
+![Getting Started](./Assets/Images/Screen%20Shot%202022-05-15%20at%207.38.31%20PM.png)
 ![Getting Started](./Assets/Images/Screen%20Shot%202022-05-15%20at%207.38.52%20PM.png)
 ![Getting Started](./Assets/Images/Screen%20Shot%202022-05-15%20at%207.45.19%20PM.png)
 
