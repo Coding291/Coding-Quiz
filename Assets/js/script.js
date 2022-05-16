@@ -48,7 +48,7 @@ var questions = [
 
 ]
 //Here we created a function where would most of the quiz will be donw
-var showQuestions = function() {
+var presentQuestions = function() {
    //Here we created header element and gave it a query selector that would take the assigned ID presented in HTML and grab that onto JavaScript
     var headerEl = document.querySelector("#header-question")
     //We then give it innerHTML so it returns the HTML content and set it equals to whatever there will be.
@@ -85,7 +85,7 @@ var showQuestions = function() {
           index++  
         }
         //Here we called out function that we created earlier and we wrote tons of code to make this work
-        showQuestions();
+        presentQuestions();
       })
       //Towards the end of this we appendchild the variable option so it make sure to appends it as the last child of an element
       headerEl.appendChild(option);
@@ -96,7 +96,7 @@ var showQuestions = function() {
     //Here we grab the ID countdown from HTML and give it El for it become a element and then we assign it back to HTML using innerHTML and set it equals to seconds using jquery
     countdownEl.innerHTML = `Timer : ${seconds} seconds`;
     //Here we created if else statement to check when the second is is less than 0 OR score >= the most possible score OR if the question reaches its limit
-    if (seconds <= 0  || questions.length[index]) {
+    if (seconds <= 0  || questions.length[index] || [index]>=5) {
         // Run the gameover function which would end the game which we will talk about it next
         gameOver()
     }
@@ -122,7 +122,7 @@ var showQuestions = function() {
     //inside of this function is our timer call this is where all the clicking show its magic
     time()
     //here we called the showQuestions function
-    showQuestions();
+    presentQuestions();
     //Here we set the varibale timerID and assign it to setInterval method that would increment or decrement the time by 1 seconds 1000 = 1 second, 2000 = 2 seconds and so on...
     timerID = setInterval(time, 1000)
 })
